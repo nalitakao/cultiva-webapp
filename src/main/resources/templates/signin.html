@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Signin</title>
+<link rel="stylesheet" type="text/css" th:href="@{~/css/global.css}" />
+<style>
+	body{ margin: 0;}
+</style>
+</head>
+<body>
+
+	<a class="signin-backlink" href="/cultiva"><- voltar</a><br>
+	
+	<img class="signin-img" src="/images/crescendo.png" >
+
+	<form class="signin-form" action="/cultiva" method="post" th:object="${users}">
+		<input name="name" id="name" placeholder="nome" /><br>
+		<span th:errors="*{name}" ></span><br>
+		
+		<input name="birthday" id="birthday" placeholder="data de nascimento (dd/mm/aaaa)" /><br>
+		<span th:errors="*{birthday}" ></span><br>
+		
+		<input name="email" id="email" placeholder="e-mail" /><br>
+		<span th:errors="*{email}" ></span><br>
+		
+		<input name="cpf" id="cpf" placeholder="CPF (xxx.xxx.xxx-xx)" /><br>
+		<span th:errors="*{cpf}" ></span><br>
+		
+		<input name="phone" id="phone" placeholder="telefone (xx) xxxxxxxxx" /><br>
+		<span th:errors="*{phone}" ></span><br>
+		
+		<input name="adress" id="adress" placeholder="Endereco" /><br>
+		<span th:errors="*{adress}" ></span><br>
+		
+		<input name="password" id="password" placeholder="senha" /><br>
+		<span th:errors="*{password}" ></span><br>
+		
+		<input name="gardentype" id="gardentype" placeholder="Tipo de horta (mini, vertical, suspensa)" /><br>
+		<span th:errors="*{gardentype}" ></span><br>
+		
+		
+		<button class="signin-submit">SALVAR</button>
+	</form>
+
+</body>
+</html>

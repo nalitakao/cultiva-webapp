@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastrar Plantio</title>
+</head>
+<link rel="stylesheet" type="text/css" th:href="@{~/css/global.css}" />
+<style>
+	body{ margin: 0; background-color: #4F6A4E;}
+</style>
+<body>
+</head>
+<body>
+
+	<img class="menu-logo" src="/images/logo.png" ><br>
+
+
+	<form class="newharvest-form" action="/harvests/mine" method="post" th:object="${harvests}">
+		<label for="harvest">Plantio</label><br>
+		<input name="harvest" id="harvest"/><br>
+		<span th:errors="*{harvest}" ></span><br>
+		
+		<label for="quantity">Quantidade</label><br>
+		<input name="quantity" id="quantity"/><br>
+		<span th:errors="*{quantity}"></span><br>
+		
+		<label for="dtharvest">Data da colheita</label><br>
+		<input name="dtharvest" id="dtharvest" placeholder="dd/mm/aaaa" /><br>
+		<span th:errors="*{dtharvest}"></span><br>
+		
+		<label for="dtexpiration">Estimativa validade</label><br>
+		<input name="dtexpiration" id="dtexpiration" placeholder="dd/mm/aaaa" /><br>
+		<span th:errors="*{dtexpiration}"></span><br>
+		
+		<label for="exchangeitem">Item de troca</label><br>
+		<input name="exchangeitem" id="exchangeitem"/><br>
+		<span th:errors="*{exchangeitem}" ></span><br>
+		
+		<label for="exchangetimes">Dia e horario disponiveis para troca</label><br>
+		<textarea name="exchangetimes" id="exchangetimes" placeholder="dd/mm/aaaa-HH:mm HH:mm" ></textarea><br>
+		<span th:errors="*{exchangetimes}"></span><br>
+
+		
+		<button class="nh-button">SALVAR</button>
+		<button class="nh-button-c" onclick="/login/menu">CANCELAR</button>
+		
+	</form>
+
+</body>
+</html>

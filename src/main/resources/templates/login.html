@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" th:href="@{~/css/global.css}" />
+<style>
+	body{ margin: 0;}
+</style>
+</head>
+<body>
+
+	<div class="login-header">
+		<img src="/images/login-header.png" >
+		<a class="login-backlink" href="/cultiva" ><- voltar</a>
+	</div>
+
+	<form class="login-form" action="/login/menu" method="get">
+		<input name="email" id="email" placeholder="e-mail" /><br>
+		<input name="password" id="password" placeholder="senha" /><br>
+		
+		<button class="login-submit"><a href="/login/menu">ENTRAR</a></button>
+		
+	</form>
+
+</body>
+</html>
